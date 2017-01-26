@@ -11,7 +11,7 @@ import {
     EventEmitterFactory,
     PageManager,
     PageController
-} from "davinchi_finsi";
+} from "@haztivity/core";
 export interface IHzHeaderService {
     setTitle(title: string|JQuery, asHtml = false): void;
     getTitle(mode?: number): String|JQuery;

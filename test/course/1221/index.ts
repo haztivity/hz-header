@@ -2,7 +2,7 @@
  * @license
  * Copyright Davinchi. All Rights Reserved.
  */
-import {ScoFactory, Sco, ISco} from "davinchi_finsi";
+import {ScoFactory, Sco, ISco} from "@haztivity/core";
 import {HzHeaderComponent} from "../../../src/HzHeader";
 import {page6611} from "./pages/6611/6611";
 let sco: ISco = ScoFactory.createSco(

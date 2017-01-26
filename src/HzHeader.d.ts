@@ -1,10 +1,9 @@
 /// <reference types="jquery" />
-/// <reference types="core-js" />
 /**
  * @license
  * Copyright Davinchi. All Rights Reserved.
  */
-import {ComponentController} from "davinchi_finsi";
+import {ComponentController} from "@haztivity/core";
 export interface IHzHeaderService {
     setTitle(title: string | JQuery, asHtml?: boolean): void;
     getTitle(mode?: number): String | JQuery;
@@ -36,7 +35,6 @@ export declare class HzHeaderComponent extends ComponentController {
         defaultLang: string;
     };
     protected _$title: JQuery;
-
     /**
      * Componente de cabecera para haztivity.
      * @param _$
@@ -48,27 +46,22 @@ export declare class HzHeaderComponent extends ComponentController {
      *      h1(data-hz-header-title)
      */
     constructor(_$: JQueryStatic, _EventEmitterFactory: any);
-
     init(options: any, config?: any): void;
-
     /**
      * Obtiene los elementos del DOM a utilizar
      * @protected
      */
     protected _getElements(): void;
-
     /**
      * Establece el valor del título
      * @param {String|JQuery}       title               Título a establecer. Puede ser un String o un objeto JQuery
      * @param {boolean}             [asHtml=false]      Indica si establecer el título como texto o html. Se utiliza $.text o $.html
      */
     setTitle(title: string | JQuery, asHtml?: boolean): void;
-
     /**
      * Resetea el titulo
      */
     clear(): void;
-
     /**
      * Devuelve el título actual
      * @param {Number}      [mode=0]            Indica cómo obtener el título. Se corresponde con uno de los modos de HzHeaderComponent.MODES
@@ -76,13 +69,11 @@ export declare class HzHeaderComponent extends ComponentController {
      * @see HzHeaderComponent.MODES
      */
     getTitle(mode?: number): String | JQuery;
-
     /**
      * Añade clases css
      * @param {String}  classes Clases a añadir
      */
     addClass(classes: any): void;
-
     /**
      * Elimina clases css
      * @param {String}  classes Clases a eliminar

@@ -4,7 +4,7 @@
  */
 import {
     Service
-} from "davinchi_finsi";
+} from "@haztivity/core";
 import {IHzHeaderService, HzHeaderComponent} from "./HzHeader";
 @Service(
     {
