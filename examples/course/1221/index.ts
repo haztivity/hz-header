@@ -4,7 +4,7 @@
  */
 import {ScoFactory, Sco, ISco} from "@haztivity/core";
 import {HzHeaderComponent} from "../../../src/HzHeader";
-import {page6611} from "./pages/6611/6611";
+import {page as page6611} from "./pages/6611/page";
 let sco: ISco = ScoFactory.createSco(
     {
         name: "1221",

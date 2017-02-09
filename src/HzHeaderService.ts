@@ -5,7 +5,7 @@
 import {
     Service
 } from "@haztivity/core";
-import {IHzHeaderService, HzHeaderComponent} from "./HzHeader";
+import {IHzHeaderService, HzHeaderComponent} from "./HzHeaderComponent";
 @Service(
     {
         name: "HzHeaderService",
