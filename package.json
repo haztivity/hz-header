@@ -1,6 +1,6 @@
 {
   "name": "@haztivity/hzheader",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Componente de cabecera para haztivity",
   "main": "index.js",
   "module": "index.js",
@@ -57,7 +57,7 @@
       "lib": "src"
     },
     "dependencies": {
-      "@haztivity/core": "bitbucket:davinchi_finsi/core@^0"
+      "@haztivity/core": "bitbucket:davinchi_finsi/core@^0.3.0"
     },
     "devDependencies": {
       "css": "github:systemjs/plugin-css@^0.1.32",
