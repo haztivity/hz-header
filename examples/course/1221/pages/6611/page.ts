@@ -3,7 +3,7 @@
  * Copyright Davinchi. All Rights Reserved.
  */
 import {PageFactory, Page, PageController} from "@haztivity/core";
-import template from "./page.html!text";
+import * as template from "./page.html!text";
 import {HzHeaderService} from "../../../../../src/HzHeaderService";
 export let page: Page = PageFactory.createPage(
     {
