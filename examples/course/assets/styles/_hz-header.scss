@@ -1,0 +1,22 @@
+//********************************************
+//* Project: hzheader
+//* File: _hz-header
+//* Description:
+//*********************************************
+/* _hz-header */
+@import "./common/_function.scss";
+
+[data-hz-component="HzHeader"] {
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+    [data-hz-header-title] {
+        font-size: em(24);
+    }
+    &.hz-header--light {
+        color: #333;
+        background-color: #ddd;
+    }
+}
+
+/* End _hz-header */

@@ -96,9 +96,9 @@ export class HzHeaderComponent extends ComponentController {
             this._$title.append(title);
         } else {
             if (asHtml != true) {
-                this._$title.text(<string>title);
+                this._$title.text(title);
             } else {
-                this._$title.html(<string>title);
+                this._$title.html(title);
             }
         }
     }

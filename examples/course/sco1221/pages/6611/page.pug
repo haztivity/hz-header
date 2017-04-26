@@ -1,0 +1,70 @@
+div
+    div.markdown-wrapper
+        :markdown-it(linkify)
+            ## Simple use
+            hz-header provides a way to manipulate a common header in haztivity through a service
+            The header is divided in two parts, the container and the title.
+            The header must have the attribute
+            ```jade
+                data-hz-component="HzHeader"
+            ```
+            The title must have the attributes
+            ```jade
+                data-hz-header-title
+            ```
+            ### Usage
+            1. Import HzHeaderComponent and include it in the sco
+            2. Include the _hzHeader mixin in the sco template
+            3. Invoke the mixin hz-header in the sco template
+            4. Import the HzHeaderService with the InjectorService in the page
+            #### index.ts
+            ```typescript
+            import {ScoFactory, Sco, ISco} from "@haztivity/core";
+            import {HzHeaderComponent} from "@haztivity/hz-header/HzHeader";
+            import {page as page6611} from "./pages/6611/page";
+            import template from "./sco.pug";
+            let sco: ISco = ScoFactory.createSco(
+                {
+                    name: "1221",
+                    template:template,
+                    pages: [
+                        page6611
+                    ],
+                    components: [// Add the component to the sco
+                        HzHeaderComponent
+                    ]
+                }
+            );
+            ```
+            #### sco.pug
+            ```jade
+            include @haztivity/hz-header/tpls/_hzHeader
+            +hz-header()
+            div(data-hz-pages)
+            ```
+            #### page.ts
+            ```typescript
+            import {PageFactory, Page, PageController, PageRegister} from "@haztivity/core";
+            import template from "./page.pug";
+            import {HzHeaderService} from "@haztivity/hz-header/HzHeaderService";
+            export let page: PageRegister = PageFactory.createPage(
+                {
+                    name: "6611",
+                    resources: [],
+                    template: template
+                }
+            );
+            page.on(
+                PageController.ON_RENDERING, null, (eventObject, template, pageController) => {
+                    // Get the headerService from the injector of the page
+                    let hzHeaderService: HzHeaderService = pageController.InjectorService.get(HzHeaderService);
+                    // store it in the controller for future uses
+                    pageController.hzHeaderService = hzHeaderService;
+                    // Change the title
+                    hzHeaderService.setTitle("Other title");
+                    // Add css classes
+                    hzHeaderService.addClass("hz-header--light");
+                }
+            );
+        button#change-title Change title
+        button#add-class Add class
