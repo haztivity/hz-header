@@ -36,17 +36,27 @@ div
                 }
             );
             ```
-            #### sco.pug
+            #### template
+            ##### Pug
             ```jade
             include @haztivity/hz-header/tpls/_hzHeader
             +hz-header()
             div(data-hz-pages)
             ```
+            or
+
+            #### Html
+            ```html
+            <header data-hz-component="HzHeader">
+                <h1 data-hz-header-title></h1>
+            </header>
+            <div data-hz-pages></div>
+            ```
             #### page.ts
             ```typescript
             import {PageFactory, Page, PageController, PageRegister} from "@haztivity/core";
             import template from "./page.pug";
-            import {HzHeaderService} from "@haztivity/hz-header/HzHeaderService";
+            import {HzHeaderService} from "@haztivity/hz-header";
             export let page: PageRegister = PageFactory.createPage(
                 {
                     name: "6611",
