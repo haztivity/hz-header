@@ -4,6 +4,7 @@
  */
 import "./main.scss";
 import "./markdown.scss";
+import "./prism-github.scss";
 import {ScoFactory, Sco, ISco} from "@haztivity/core";
 import {HzNavbarComponent} from "@haztivity/hz-navbar";
 import {HzHeaderComponent} from "../components/hz-header/HzHeader";

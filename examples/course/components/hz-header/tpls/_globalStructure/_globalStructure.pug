@@ -70,13 +70,11 @@ mixin _mod-baseContent__action(params)
     -params.internalParams= params.internalParams || {};
     case (params.externalParams.tag)
         when "link"
-            a(id=params.externalParams.id class=params.internalParams.cssClass href=params.externalParams.href)(class=params.externalParams.cssClass)&attributes(
-            attributes)&attributes(params.internalParams.attributes)&attributes(params.externalParams.attributes)!=params.externalParams.content
-            block
+            a(id=params.externalParams.id class=params.internalParams.cssClass href=params.externalParams.href)(class=params.externalParams.cssClass)&attributes(attributes)&attributes(params.internalParams.attributes)&attributes(params.externalParams.attributes)!=params.externalParams.content
+                block
         default
-            button(id=params.externalParams.id class=params.internalParams.cssClass)(class=params.externalParams.cssClass)&attributes(
-            attributes)&attributes(params.internalParams.attributes)&attributes(params.externalParams.attributes)!=params.externalParams.content
-            block
+            button(id=params.externalParams.id class=params.internalParams.cssClass)(class=params.externalParams.cssClass)&attributes(attributes)&attributes(params.internalParams.attributes)&attributes(params.externalParams.attributes)!=params.externalParams.content
+                block
 
 mixin mod-baseContent__element(params)
     -params = params || {};
@@ -92,8 +90,5 @@ mixin _mod-baseContent__tag(params)
     -params.internalParams= params.internalParams || {};
     -params.internalParams.ignoreContent = params.internalParams.ignoreContent == undefined ?  true : params.internalParams.ignoreContent;
     -params.externalParams.tag = params.externalParams.tag || params.internalParams.tag || "div";
-    #{params.externalParams.tag}(id=params.externalParams.id class=params.internalParams.cssClass)(class=params.externalParams.cssClass)&attributes(
-    attributes)&attributes(params.internalParams.attributes)&attributes(params.externalParams.attributes)!= params.internalParams.ignoreContent != true
-        ? params.externalParams.content
-        : ""
-    block
+    #{params.externalParams.tag}(id=params.externalParams.id class=params.internalParams.cssClass)(class=params.externalParams.cssClass)&attributes(attributes)&attributes(params.internalParams.attributes)&attributes(params.externalParams.attributes)!= params.internalParams.ignoreContent != true? params.externalParams.content: ""
+        block
