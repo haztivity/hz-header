@@ -16,7 +16,7 @@ exports.config = {
             shim: {
                 jquery: {
                     source: "node_modules/jquery/dist/jquery.js",
-                    exports: "$"
+                    exports: "$",
                 }
             }
         }
