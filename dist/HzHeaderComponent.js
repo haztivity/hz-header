@@ -122,19 +122,7 @@ HzHeaderComponent.PREFIX = "hz-header";
 HzHeaderComponent.QUERY_TITLE = "[data-hz-header-title]";
 HzHeaderComponent.CLASS_COMPONENT = HzHeaderComponent_1.PREFIX;
 HzHeaderComponent.CLASS_TITLE = HzHeaderComponent_1.CLASS_COMPONENT + "__title";
-HzHeaderComponent._DEFAULTS = {
-    locale: {
-        "es": {
-            next: "Siguiente",
-            prev: "Anterior",
-            currentPage: "Página actual",
-            totalPages: "Páginas totales",
-            home: "Ir al inicio",
-            index: "Mostrar índice"
-        }
-    },
-    defaultLang: "es"
-};
+HzHeaderComponent._DEFAULTS = {};
 HzHeaderComponent = HzHeaderComponent_1 = __decorate([
     core_1.Component({
         name: "HzHeader",

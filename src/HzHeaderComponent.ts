@@ -41,17 +41,6 @@ export class HzHeaderComponent extends ComponentController {
     protected static readonly CLASS_COMPONENT = HzHeaderComponent.PREFIX;
     protected static readonly CLASS_TITLE = `${HzHeaderComponent.CLASS_COMPONENT}__title`;
     protected static readonly _DEFAULTS = {
-        locale: {
-            "es": {
-                next: "Siguiente",
-                prev: "Anterior",
-                currentPage: "Página actual",
-                totalPages: "Páginas totales",
-                home: "Ir al inicio",
-                index: "Mostrar índice"
-            }
-        },
-        defaultLang: "es"
     };
     protected _$title: JQuery;
 

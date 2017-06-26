@@ -1,0 +1,45 @@
+include ./_globalStructure/_globalStructure
+//- @description Mixin for the title of the header component.
+//- Block will be passed as child of the title
+//- @see _mod-baseContent__title
+//- @param {Object}             [params]            Parameters
+//- @param {number}             [level=1]           Number of the level to render the header
+//- @param {String}             [tag="h#{level}"]   Tag to generate for the container.
+//- @param {boolean|Object}     [title=true]        Generate the title tag. If false, the title will not be generated with the data-hz-header-title, instead, the mixin will generate a wrapper
+//- @example
+//- +hz-title()
+//- @example
+//- +hz-title({
+//-     cssClass:"myTitle",
+//-     level:2
+//- })
+//- @example
+//- +hz-title()
+//-     i.fa.fa-home // This will be child of the title
+//- +hz-title({
+//-     title:false
+//-  })
+//-     h1.myTitle(data-hz-header-title)
+mixin hz-header__title(params)
+    -
+        params = params || {};
+        params.level = params.level || 1;
+    if(params.title != false)
+        +_mod-baseContent__title({
+            internalParams: {
+                cssClass: "hz-header__title",
+                attributes: {
+                    "data-hz-header-title": ""
+                }
+            },
+            externalParams: params
+        })&attributes(attributes)
+            block
+    else
+        +_mod-baseContent({
+            internalParams: {
+                cssClass: "hz-header__title"
+            },
+            externalParams: params
+        })&attributes(attributes)
+            block
