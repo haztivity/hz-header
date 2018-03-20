@@ -1,15 +1,15 @@
 div
     div.markdown-wrapper
-        :markdown-it(linkify)
+        :markdown-it
             ## Simple use
             hz-header provides a way to manipulate a common header in haztivity through a service
             The header is divided in two parts, the container and the title.
             The header must have the attribute
-            ```jade
+            ```pug
                 data-hz-component="HzHeader"
             ```
             The title must have the attributes
-            ```jade
+            ```pug
                 data-hz-header-title
             ```
             ### Usage
@@ -38,7 +38,7 @@ div
             ```
             #### template
             ##### Pug
-            ```jade
+            ```pug
             include @haztivity/hz-header/tpls/_hzHeader
             +hz-header()
             div(data-hz-pages)

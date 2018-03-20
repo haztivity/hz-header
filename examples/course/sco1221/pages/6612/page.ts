@@ -7,7 +7,7 @@ import template from "./page.pug";
 import {HzHeaderService} from "../../../components/hz-header/HzHeaderService";
 import * as Prism from "prismjs";
 import "prismjs/components/prism-typescript";
-import "prismjs/components/prism-jade";
+import "prismjs/components/prism-pug";
 export let page: PageRegister = PageFactory.createPage(
     {
         name: "6612",

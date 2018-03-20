@@ -1,6 +1,6 @@
 div
     div.markdown-wrapper
-        :markdown-it(linkify)
+        :markdown-it
             ## Custom html
             hz-header also provides a way to change the html of the title.
             The setTitle method accepts:
@@ -12,13 +12,13 @@ div
             hzHeaderService.setTitle("String title");
             ```
         button#string-title String title
-        :markdown-it(linkify)
+        :markdown-it
             #### asHtml
             ```typescript
             hzHeaderService.setTitle(`<span class="fa fa-html5">HTML title</span>`,true);
             ```
         button#html-title HTML title
-        :markdown-it(linkify)
+        :markdown-it
             #### JQuery object
             ```typescript
             hzHeaderService.setTitle($(`<span>JQuery title</span>`));

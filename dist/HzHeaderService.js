@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 var core_1 = require("@haztivity/core");
 var HzHeaderComponent_1 = require("./HzHeaderComponent");
-var HzHeaderService = (function () {
+var HzHeaderService = /** @class */ (function () {
     function HzHeaderService(_HzHeaderComponent) {
         var publish = [
             "setTitle",
@@ -39,15 +39,15 @@ var HzHeaderService = (function () {
     HzHeaderService.prototype.removeClass = function (classes) {
         return undefined;
     };
+    HzHeaderService = __decorate([
+        core_1.Service({
+            name: "HzHeaderService",
+            dependencies: [
+                HzHeaderComponent_1.HzHeaderComponent
+            ]
+        })
+    ], HzHeaderService);
     return HzHeaderService;
 }());
-HzHeaderService = __decorate([
-    core_1.Service({
-        name: "HzHeaderService",
-        dependencies: [
-            HzHeaderComponent_1.HzHeaderComponent
-        ]
-    })
-], HzHeaderService);
 exports.HzHeaderService = HzHeaderService;
 //# sourceMappingURL=HzHeaderService.js.map

@@ -21,7 +21,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Copyright Davinchi. All Rights Reserved.
  */
 var core_1 = require("@haztivity/core");
-var HzHeaderComponent = HzHeaderComponent_1 = (function (_super) {
+var HzHeaderComponent = /** @class */ (function (_super) {
     __extends(HzHeaderComponent, _super);
     /**
      * Componente de cabecera para haztivity.
@@ -36,6 +36,7 @@ var HzHeaderComponent = HzHeaderComponent_1 = (function (_super) {
     function HzHeaderComponent(_$, _EventEmitterFactory) {
         return _super.call(this, _$, _EventEmitterFactory) || this;
     }
+    HzHeaderComponent_1 = HzHeaderComponent;
     HzHeaderComponent.prototype.init = function (options, config) {
         this._options = options;
         this._$element.addClass(HzHeaderComponent_1.CLASS_COMPONENT);
@@ -110,30 +111,30 @@ var HzHeaderComponent = HzHeaderComponent_1 = (function (_super) {
     HzHeaderComponent.prototype.removeClass = function (classes) {
         this._$element.removeClass(classes);
     };
+    HzHeaderComponent.NAMESPACE = "hzHeader";
+    HzHeaderComponent.MODES = {
+        html: 1,
+        jquery: 2,
+        text: 0
+    };
+    HzHeaderComponent.PREFIX = "hz-header";
+    HzHeaderComponent.QUERY_TITLE = "[data-hz-header-title]";
+    HzHeaderComponent.CLASS_COMPONENT = HzHeaderComponent_1.PREFIX;
+    HzHeaderComponent.CLASS_TITLE = HzHeaderComponent_1.CLASS_COMPONENT + "__title";
+    HzHeaderComponent._DEFAULTS = {};
+    HzHeaderComponent = HzHeaderComponent_1 = __decorate([
+        core_1.Component({
+            name: "HzHeader",
+            dependencies: [
+                core_1.$,
+                core_1.EventEmitterFactory,
+                core_1.Navigator,
+                core_1.PageManager
+            ]
+        })
+    ], HzHeaderComponent);
     return HzHeaderComponent;
+    var HzHeaderComponent_1;
 }(core_1.ComponentController));
-HzHeaderComponent.NAMESPACE = "hzHeader";
-HzHeaderComponent.MODES = {
-    html: 1,
-    jquery: 2,
-    text: 0
-};
-HzHeaderComponent.PREFIX = "hz-header";
-HzHeaderComponent.QUERY_TITLE = "[data-hz-header-title]";
-HzHeaderComponent.CLASS_COMPONENT = HzHeaderComponent_1.PREFIX;
-HzHeaderComponent.CLASS_TITLE = HzHeaderComponent_1.CLASS_COMPONENT + "__title";
-HzHeaderComponent._DEFAULTS = {};
-HzHeaderComponent = HzHeaderComponent_1 = __decorate([
-    core_1.Component({
-        name: "HzHeader",
-        dependencies: [
-            core_1.$,
-            core_1.EventEmitterFactory,
-            core_1.Navigator,
-            core_1.PageManager
-        ]
-    })
-], HzHeaderComponent);
 exports.HzHeaderComponent = HzHeaderComponent;
-var HzHeaderComponent_1;
 //# sourceMappingURL=HzHeaderComponent.js.map
