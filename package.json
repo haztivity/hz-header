@@ -1,6 +1,6 @@
 {
   "name": "@haztivity/hz-header",
-  "version": "0.6.3",
+  "version": "0.7.0",
   "description": "Componente de cabecera para haztivity",
   "main": "dist/HzHeader.js",
   "module": "dist/HzHeader.js",
